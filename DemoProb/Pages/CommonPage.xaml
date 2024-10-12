@@ -10,36 +10,17 @@
 
     <Grid Background="#ffffff">
         <Grid.RowDefinitions>
-            <RowDefinition Height="12.5*"/>
-            <RowDefinition Height="35.5*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="39*"/>
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <TextBlock VerticalAlignment="Center" Margin="10 0" FontSize="30" Cursor="">Учебные услуги каталог</TextBlock>
-            <TextBlock Margin="5 0" FontSize="14">Поиск по цене</TextBlock>
-            <ComboBox Margin="5 0 10 5" x:Name="CostMaxMinCB" SelectionChanged="CostMaxMinCB_SelectionChanged">
-                <ComboBoxItem>Возростание</ComboBoxItem>
-                <ComboBoxItem>По умолчанию</ComboBoxItem>
-                <ComboBoxItem>Убывание</ComboBoxItem>
-            </ComboBox>
-            <TextBlock Margin="5 0" FontSize="14">Поиск по названию</TextBlock>
-            <TextBox Margin="5 0 10 5" x:Name="SearchTB" TextChanged="SearchTB_TextChanged"></TextBox>
-            <TextBlock Margin="5 0 5 0" FontSize="14">Поиск по скидке</TextBlock>
-            <ComboBox Margin="5 0 10 0" x:Name="DiscountCB" SelectionChanged="DiscountCB_SelectionChanged">
-                <ComboBoxItem>все</ComboBoxItem>
-                <ComboBoxItem>без скидки</ComboBoxItem>
-                <ComboBoxItem>0% - 5%</ComboBoxItem>
-                <ComboBoxItem>5% - 15</ComboBoxItem>
-                <ComboBoxItem>15% - 30%</ComboBoxItem>
-                <ComboBoxItem>30% - 70%</ComboBoxItem>
-                <ComboBoxItem>70% - 100%</ComboBoxItem>
-            </ComboBox>
-        </StackPanel>
+
+        <TextBlock VerticalAlignment="Center" Margin="10 0" FontSize="30">Учебные услуги: каталог</TextBlock>
         <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
             <WrapPanel Name ="ServiceWpar" HorizontalAlignment="Center" ItemHeight="230" ItemWidth="680"/>
         </ScrollViewer>
-        <StackPanel Grid.Row="2" VerticalAlignment="Center">
-            <Button Margin="10" Height="60" Style="{DynamicResource StyledButton}" Click="Button_Click_GoBack">Назад</Button>
+        <StackPanel Grid.Row="2">
+            <Button Margin="10" Style="{DynamicResource StyledButton}" Click="Button_Click_GoBack">Назад</Button>
         </StackPanel>
     </Grid>
 </Page>
