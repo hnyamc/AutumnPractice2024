@@ -33,7 +33,7 @@ namespace DemoProb.Pages
             ser = service;
             InitializeComponent();
             var imagesBD = App.db.ServicePhoto.FirstOrDefault(x => x.ID == ser.ServicePhotoID).PhotoPath.ToString();
-            string folderName = "StudPracticeAutumn2024/Resource";
+            string folderName = "DemoProb/Resource";
             string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
             string fullPath = System.IO.Path.Combine(projectDirectory, folderName, imagesBD);
 

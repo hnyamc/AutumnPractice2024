@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="DemoProb.Controls.ClientServiceUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DemoProb.Controls"
+             mc:Ignorable="d" 
+                             d:DesignHeight="200" d:DesignWidth="680">
+    <Border BorderBrush="#A37D4E" BorderThickness="2" Margin="3">
+        <Grid Background="#e7fabf" x:Name="myGrid">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image Margin="20 0 20 0" Width="180" Height="180" x:Name="ImageService"></Image>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Margin="10 10" FontSize="20" x:Name="TitleServiceTB" TextWrapping="Wrap" Width="430" Height="60">Наименование услуги</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10 0" FontSize="20" x:Name="textDecorate"></TextBlock>
+                        <TextBlock  FontSize="20" x:Name="CostAndTimeTB">800 за 30 минут</TextBlock>
+                    </StackPanel>
+                    <TextBlock Margin="10 0" FontSize="20" x:Name="DiscountTB">Скидка</TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0 10">
+                        <Button Width="120" Margin="10" Click="Button_Click_Registration">Записаться</Button>
+                        <DatePicker x:Name="DateDP" Width="120" Margin="10"></DatePicker>
+                        <TextBox  Width="120" Margin="10" Text="Время записи" 
+                         x:Name="myTextBox"
+                         GotFocus="RemoveText"
+                         Foreground="Gray"
+                         LostFocus="TextBox_LostFocus"
+                         PreviewTextInput="myTextBox_PreviewTextInput" TextChanged="myTextBox_TextChanged"/>
+                    </StackPanel>
+                    <ComboBox x:Name="ListFIOCB"></ComboBox>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

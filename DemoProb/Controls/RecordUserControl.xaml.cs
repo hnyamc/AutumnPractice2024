@@ -24,12 +24,11 @@ namespace DemoProb.Controls
 
         private string fullName;
         private ClientService clientSer;
-        private bool _active;
-        public RecordUserControl(ClientService clientService, bool active)
+        public RecordUserControl(ClientService clientService)
         {
             InitializeComponent();
-            _active = active;
             clientSer = clientService;
+            ColorTextBlock();
             DataClient();
         }
 
@@ -41,8 +40,6 @@ namespace DemoProb.Controls
             TimeSpan timeDifference = eventTime - currentTime;
             if (timeDifference.TotalSeconds > 0)
             {
-                if (_active)
-                    TimeBeforeStartTB.Foreground = new SolidColorBrush(Colors.Red);
                 // Форматируем результат
                 string timeLeft = $"{timeDifference.Days} дн. {timeDifference.Hours} ч. {timeDifference.Minutes} мин.";
 
@@ -61,6 +58,14 @@ namespace DemoProb.Controls
             PhoneTB.Text = clientSer.Client.Phone.ToString();
             EmailTB.Text = clientSer.Client.Email.ToString(); ;
             DataTimeTB.Text = clientSer.StartTime.ToString();
+        }
+        private void ColorTextBlock()
+        {
+            DateTime currentTime = DateTime.Now;
+            if (clientSer.StartTime > currentTime && clientSer.StartTime.Subtract(currentTime).TotalHours <= 1)
+            {
+                TimeBeforeStartTB.Foreground = new SolidColorBrush(Colors.Red);
+            }
         }
     }
 }

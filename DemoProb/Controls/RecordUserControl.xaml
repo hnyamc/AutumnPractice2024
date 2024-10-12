@@ -17,7 +17,7 @@
                         <TextBlock  FontSize="20" x:Name="EmailTB" Width="200" Margin="10 0"></TextBlock>
                         <TextBlock  FontSize="20" x:Name="DataTimeTB" Width="200" Margin="10 0"></TextBlock>
                     </StackPanel>
-                    <TextBlock HorizontalAlignment="Left" Margin="20 0" FontSize="20" x:Name="TimeBeforeStartTB" Width="300">Время до начала сеанса</TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Margin="20 0" FontSize="20" x:Name="TimeBeforeStartTB" Width="300" >Время до начала сеанса</TextBlock>
                 </StackPanel>
             </StackPanel>
         </Grid>

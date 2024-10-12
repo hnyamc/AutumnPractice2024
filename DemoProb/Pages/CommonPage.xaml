@@ -15,19 +15,12 @@
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" BorderBrush="#04a0ff" BorderThickness="1.5" Margin="5">
-            <TextBlock VerticalAlignment="Center" Margin="10 0" FontSize="30">Учебные услуги: каталог</TextBlock>
-        </Border>
-        <Border Grid.Row="1" BorderBrush="#04a0ff"
-        BorderThickness="1.5" Margin="5">
-            <ScrollViewer HorizontalScrollBarVisibility="Disabled">
-                <WrapPanel Name ="ServiceWpar" HorizontalAlignment="Center" ItemHeight="230" ItemWidth="680"/>
-            </ScrollViewer>
-        </Border>
-        <Border Grid.Row="2" BorderBrush="#04a0ff" BorderThickness="1.5" Margin="5" VerticalAlignment="Center">
-            <StackPanel>
-                <Button Margin="10" Style="{DynamicResource CustomButton}" Click="Button_Click_GoBack">Назад</Button>
-            </StackPanel>
-        </Border>
+        <TextBlock VerticalAlignment="Center" Margin="10 0" FontSize="30">Учебные услуги: каталог</TextBlock>
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
+            <WrapPanel Name ="ServiceWpar" HorizontalAlignment="Center" ItemHeight="230" ItemWidth="680"/>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2">
+            <Button Margin="10" Style="{DynamicResource StyledButton}" Click="Button_Click_GoBack">Назад</Button>
+        </StackPanel>
     </Grid>
 </Page>

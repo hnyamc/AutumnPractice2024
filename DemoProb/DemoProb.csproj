@@ -64,6 +64,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\ClientServiceUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\CommonUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -83,6 +87,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ClientServiceUserControl.xaml.cs">
+      <DependentUpon>ClientServiceUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CommonUserControl.xaml.cs">
       <DependentUpon>CommonUserControl.xaml</DependentUpon>
@@ -159,6 +166,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ClientServiceListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ClientViewService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CommonPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -178,6 +193,12 @@
     </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ClientServiceListView.xaml.cs">
+      <DependentUpon>ClientServiceListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ClientViewService.xaml.cs">
+      <DependentUpon>ClientViewService.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CommonPage.xaml.cs">
       <DependentUpon>CommonPage.xaml</DependentUpon>

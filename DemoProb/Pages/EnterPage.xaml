@@ -5,30 +5,53 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DemoProb.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="720"
+      d:DesignHeight="800" d:DesignWidth="900"
       Title="EnterPage">
 
-    <Grid Background="Bisque">
+    <Grid Background="#ffffff">
         <Grid.RowDefinitions>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="39*"/>
+            <RowDefinition Height="12.5*"/>
+            <RowDefinition Height="35.5*"/>
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" BorderBrush="#04a0ff" BorderThickness="1.5" Margin="5">
-            <TextBlock VerticalAlignment="Center" Margin="10 0" FontSize="30">Учебные Услуги</TextBlock>
-        </Border>
-        <Border Grid.Row="1" BorderBrush="#04a0ff"
-                BorderThickness="1.5" Margin="5">
-            <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <TextBlock VerticalAlignment="Center" Margin="10 0" FontSize="30">Учебные услуги</TextBlock>
+                <TextBlock Margin="5 0" FontSize="14">Поиск по цене</TextBlock>
+                <ComboBox Margin="5 0 10 5" x:Name="CostMaxMinCB" SelectionChanged="CostMaxMinCB_SelectionChanged">
+                    <ComboBoxItem>Возростание</ComboBoxItem>
+                    <ComboBoxItem>По умолчанию</ComboBoxItem>
+                    <ComboBoxItem>Убывание</ComboBoxItem>
+                </ComboBox>
+                <TextBlock Margin="5 0" FontSize="14">Поиск по названию</TextBlock>
+                <TextBox Margin="5 0 10 5" x:Name="SearchTB" TextChanged="SearchTB_TextChanged"></TextBox>
+                <TextBlock Margin="5 0 5 0" FontSize="14">Поиск по скидке</TextBlock>
+                <ComboBox Margin="5 0 10 0" x:Name="DiscountCB" SelectionChanged="DiscountCB_SelectionChanged">
+                    <ComboBoxItem>все</ComboBoxItem>
+                    <ComboBoxItem>без скидки</ComboBoxItem>
+                    <ComboBoxItem>0% - 5%</ComboBoxItem>
+                    <ComboBoxItem>5% - 15</ComboBoxItem>
+                    <ComboBoxItem>15% - 30%</ComboBoxItem>
+                    <ComboBoxItem>30% - 70%</ComboBoxItem>
+                    <ComboBoxItem>70% - 100%</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
                 <WrapPanel Name ="ServiceWpar" HorizontalAlignment="Center" ItemHeight="230" ItemWidth="680"/>
             </ScrollViewer>
-        </Border>
-        <Border Grid.Row="2" BorderBrush="#04a0ff" BorderThickness="1.5" Margin="5">
-            <StackPanel>
-                <Button Margin="10">Добавить услугу</Button>
-                <Button Margin="10">Просмотр записей</Button>
+            
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+                <StackPanel Margin="20 0 10 0">
+                    <Button Margin="10" Width="280" Style="{DynamicResource StyledButton}" Click="Button_Click_AddService">Добавить услугу</Button>
+                    <Button Margin="10" Width="280" Style="{DynamicResource StyledButton}" Click="Button_Click_ClientViewService">Запись клиентов на сеанс</Button>
+                </StackPanel>
+                <StackPanel Margin="20 0 20 0">
+                    <Button Margin="10" Width="280" Style="{DynamicResource StyledButton}" Click="Button_Click_CommanService">Обычный просмотр</Button>
+                    <Button Margin="10" Width="280" Style="{DynamicResource StyledButton}" Click="Button_Click_SeeServiceRecord">Просмотр записей на сеанс</Button>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock TextWrapping="Wrap" x:Name="CountServiceTB" FontSize="16">999/999</TextBlock>
+                </StackPanel>
             </StackPanel>
-        </Border>
     </Grid>
 </Page>
