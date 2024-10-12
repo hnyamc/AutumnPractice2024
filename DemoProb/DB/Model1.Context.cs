@@ -13,10 +13,10 @@ namespace DemoProb.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SchoolServiceeEntities : DbContext
+    public partial class SchollEntities : DbContext
     {
-        public SchoolServiceeEntities()
-            : base("name=SchoolServiceeEntities")
+        public SchollEntities()
+            : base("name=SchollEntities")
         {
         }
     
@@ -36,6 +36,7 @@ namespace DemoProb.DB
         public virtual DbSet<ProductSale> ProductSale { get; set; }
         public virtual DbSet<Service> Service { get; set; }
         public virtual DbSet<ServicePhoto> ServicePhoto { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
     }
 }

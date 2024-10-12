@@ -14,6 +14,6 @@ namespace DemoProb
     /// </summary>
     public partial class App : Application
     {
-        public static SchoolServiceeEntities db = new SchoolServiceeEntities();
+        public static SchollEntities db = new SchollEntities();
     }
 }

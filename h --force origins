@@ -1,0 +1,69 @@
+[33mcommit 908129561cb5d0d9c62185f54e2464e1bf294578[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: hnyamc <qwe951qwe@mail.ru>
+Date:   Sat Oct 12 00:56:30 2024 +0300
+
+    Lama
+
+[33mcommit 96f3d3bd719e52eb9d9f17974e0abc37c252b0e1[m
+Author: hnyamc <egorpopelyuk43@gmail.com>
+Date:   Sat Oct 12 00:44:55 2024 +0300
+
+    апвапвап
+
+[33mcommit bbcf1082f24fe0be3630c0b74d09a0a2cbe1a04c[m
+Author: hnyamc <egorpopelyuk43@gmail.com>
+Date:   Sat Oct 12 00:36:20 2024 +0300
+
+    qve
+
+[33mcommit 9c999b5928c1f0fb0e4a242200653d4d9b62d3f0[m
+Author: Jeiji7 <egorpopelyuk43@gmail.com>
+Date:   Fri Oct 11 00:28:53 2024 +0300
+
+    Reapply "пробный комит"
+    
+    This reverts commit f4590187130bab49977eea93998b574e414b0d24.
+
+[33mcommit f4590187130bab49977eea93998b574e414b0d24[m
+Author: Jeiji7 <egorpopelyuk43@gmail.com>
+Date:   Fri Oct 11 00:27:38 2024 +0300
+
+    Revert "пробный комит"
+    
+    This reverts commit 591e5cb4de98b0067b70ca053dead027c7b18bc9.
+
+[33mcommit 591e5cb4de98b0067b70ca053dead027c7b18bc9[m
+Author: Jeiji7 <egorpopelyuk43@gmail.com>
+Date:   Fri Oct 11 00:24:31 2024 +0300
+
+    пробный комит
+
+[33mcommit c04c2bf6ae3f477c4c03da72ca32cdd042046500[m
+Author: hnyamc <144440707+hnyamc@users.noreply.github.com>
+Date:   Mon Sep 30 18:37:17 2024 +0300
+
+    Update schoolServicee.sql
+
+[33mcommit d2024523c82c9b97701c6fe85933bd982061bd19[m
+Author: hnyamc <144440707+hnyamc@users.noreply.github.com>
+Date:   Mon Sep 30 18:14:55 2024 +0300
+
+    Add files via upload
+
+[33mcommit dd54c7545236eb4e22f949e4e879a0d7e4b48f83[m
+Author: hnyamc <144440707+hnyamc@users.noreply.github.com>
+Date:   Mon Sep 30 18:13:16 2024 +0300
+
+    Add files via upload
+
+[33mcommit 6970f8c5fb4dc963f3b16ad0d6420936c2f7492c[m
+Author: 202107 <202107@1210-0002>
+Date:   Mon Sep 30 17:49:00 2024 +0300
+
+    Добавьте файлы проекта.
+
+[33mcommit 4d99a76bf70f7b0add6b8d3861240533a0d23162[m
+Author: 202107 <202107@1210-0002>
+Date:   Mon Sep 30 17:48:58 2024 +0300
+
+    Добавить .gitattributes и .gitignore.

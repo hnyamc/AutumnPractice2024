@@ -1,0 +1,43 @@
+﻿<Page x:Class="DemoProb.Pages.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DemoProb.Pages"
+      mc:Ignorable="d" 
+         d:DesignHeight="800" d:DesignWidth="900"
+  Title="AuthorizationPage">
+
+
+    <Grid RenderTransformOrigin="0.5,0.5" Background="#e7fabf">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="#04a0ff" BorderThickness="1.5" Margin="5">
+            <TextBlock VerticalAlignment="Center" Margin="10 0" FontSize="60" HorizontalAlignment="Center">Авторизация</TextBlock>
+        </Border>
+        <Border BorderBrush="#04a0ff" BorderThickness="1.5" Margin="5"  Grid.Row="1">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Margin="10 0" FontSize="30">Фамилия</TextBlock>
+                    <TextBox Width="300" x:Name="LastNameTB" Background="White" Padding="5" Margin="10 0" FontSize="30"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Margin="10 0 75 0" FontSize="30">Имя</TextBlock>
+                    <TextBox  Width="300" x:Name="FirstNameTB" Padding="5" Margin="10 0" FontSize="30"></TextBox>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="2" BorderBrush="#04a0ff" BorderThickness="1.5" Margin="5">
+            <Button  Width="640" Height="70" Click="Button_Click_Enter" Style="{DynamicResource StyledButton}">
+                <TextBlock FontSize="40">
+            Войти
+                </TextBlock>
+            </Button>
+        </Border>
+
+    </Grid>
+</Page>

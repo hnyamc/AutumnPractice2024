@@ -24,7 +24,7 @@ namespace DemoProb
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Pages.EnterPage());
+            MainFrame.Navigate(new Pages.AuthorizationPage());
         }
     }
 }

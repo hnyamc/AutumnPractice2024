@@ -64,7 +64,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\UserControl1.xaml">
+    <Page Include="Controls\CommonUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RecordUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ServiceUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -76,8 +84,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
+    <Compile Include="Controls\CommonUserControl.xaml.cs">
+      <DependentUpon>CommonUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RecordUserControl.xaml.cs">
+      <DependentUpon>RecordUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServiceUserControl.xaml.cs">
+      <DependentUpon>ServiceUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="DB\Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -127,6 +141,9 @@
     <Compile Include="DB\ServicePhoto.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Tag.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -134,7 +151,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\EditServicePage.xaml">
+    <Page Include="Pages\AddService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthorizationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CommonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EditService.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,8 +173,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\EditServicePage.xaml.cs">
-      <DependentUpon>EditServicePage.xaml</DependentUpon>
+    <Compile Include="Pages\AddService.xaml.cs">
+      <DependentUpon>AddService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthorizationPage.xaml.cs">
+      <DependentUpon>AuthorizationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CommonPage.xaml.cs">
+      <DependentUpon>CommonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditService.xaml.cs">
+      <DependentUpon>EditService.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EnterPage.xaml.cs">
       <DependentUpon>EnterPage.xaml</DependentUpon>
@@ -184,16 +222,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="DB\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resource\school_logo.png" />
     <Resource Include="Resource\Услуги школы\for company.jpg" />
     <Resource Include="Resource\Услуги школы\online lessons.jpg" />
@@ -216,6 +244,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
